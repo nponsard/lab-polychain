@@ -21,7 +21,7 @@ export class Block {
 }
 
 export function genesis() {
-  return new Block(Date.now(), '-----', 'f1r57-h45h', []);
+  return new Block(1670410844616, '-----', 'f1r57-h45h', []);
 }
 
 export async function hashData(timestamp: number, lastHash: string, data: any) {
@@ -42,4 +42,10 @@ export async function mineBlock(lastBlock: Block, data: any) {
   const hash = await hashData(timestamp, lastHash, data);
 
   return new Block(timestamp, lastHash, hash, data);
+}
+
+export function blockHash(block: Block) {
+  const { timestamp, lastHash, data } = block;
+
+  return hashData(timestamp, lastHash, data);
 }
