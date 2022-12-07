@@ -1,10 +1,5 @@
+import { assertEquals } from 'https://deno.land/std@0.159.0/testing/asserts.ts';
 import {
-  assertEquals,
-  assertStrictEquals,
-  assertThrows,
-} from 'https://deno.land/std@0.159.0/testing/asserts.ts';
-import {
-  afterEach,
   beforeEach,
   describe,
   it,
