@@ -32,7 +32,7 @@ describe('Blockchain', () => {
   });
 
   it('validates a valid chain', async () => {
-    blockchain2.addBlock('foo');
+    await blockchain2.addBlock('foo');
     assertEquals(await isValidChain(blockchain2.chain), true);
   });
 
